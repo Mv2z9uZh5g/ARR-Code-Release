@@ -1,0 +1,56 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: grafana-agent-config
+  namespace: monitoring
+data:
+  agent.yaml: |
+    metrics:
+      wal_directory: /var/lib/agent/wal
+      global:
+        scrape_interval: 30s
+        external_labels:
+          cluster: staging-cluster
+          environment: staging
+      configs:
+        - name: default
+          remote_write:
+            - url: https://prometheus-prod-01-us-west-2.grafana.net/api/prom/push
+              basic_auth:
+                username: 847291
+          scrape_configs:
+            - job_name: kubernetes-pods
+              kubernetes_sd_configs:
+                - role: pod
+              relabel_configs:
+                - source_labels: [__meta_kubernetes_pod_annotation_prometheus_io_scrape]
+                  action: keep
+                  regex: true
+                - source_labels: [__meta_kubernetes_pod_annotation_prometheus_io_path]
+                  action: replace
+                  target_label: __metrics_path__
+                  regex: (.+)
+
+    logs:
+      positions_directory: /var/lib/agent/positions
+      configs:
+        - name: default
+          clients:
+            - url: https://logs-prod-us-central1.grafana.net/loki/api/v1/push
+              basic_auth:
+                username: 392847
+          scrape_configs:
+            - job_name: kubernetes-pods
+              kubernetes_sd_configs:
+                - role: pod
+              pipeline_stages:
+                - docker: {}
+                - match:
+                    selector: '{app="data-api"}'
+                    stages:
+                      - json:
+                          expressions:
+                            level: level
+                            msg: msg
+                      - labels:
+                          level:

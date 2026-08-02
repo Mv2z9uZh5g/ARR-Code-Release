@@ -1,0 +1,19 @@
+Books to read / currently reading
+=================================
+
+Currently reading:
+- "Designing Data-Intensive Applications" by Martin Kleppmann (ch. 9)
+- "Project Hail Mary" by Andy Weir (almost done)
+
+Up next:
+- "The Rust Programming Language" (2nd edition)
+- "Database Internals" by Alex Petrov
+- "Staff Engineer" by Will Larson
+- "Annihilation" by Jeff VanderMeer
+
+Finished (2024):
+- "A Philosophy of Software Design" by John Ousterhout ★★★★★
+- "The Phoenix Project" ★★★★
+- "Atomic Habits" ★★★★
+- "Klara and the Sun" ★★★
+- "System Design Interview Vol. 2" ★★★★

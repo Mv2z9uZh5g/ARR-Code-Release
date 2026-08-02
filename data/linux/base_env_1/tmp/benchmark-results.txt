@@ -1,0 +1,8 @@
+BenchmarkListPipelines-8          12453     96847 ns/op    24576 B/op     312 allocs/op
+BenchmarkGetPipeline-8            45231     26543 ns/op     8192 B/op      98 allocs/op
+BenchmarkListDatasets-8            8901    134522 ns/op    32768 B/op     445 allocs/op
+BenchmarkGetDatasetSchema-8       31204     38291 ns/op    12288 B/op     156 allocs/op
+BenchmarkTriggerPipeline-8        15678     76432 ns/op    16384 B/op     201 allocs/op
+
+PASS
+ok  	github.com/datacorp/internal-api/internal/handlers	14.523s

@@ -1,0 +1,12 @@
+[2024-03-12 02:00:14] Starting backup of dataplatform...
+[2024-03-12 02:01:47] Backup complete: /home/marcus/backups/postgres/dataplatform_20240312_020014.sql.gz
+[2024-03-12 02:01:47] Size: 234M
+[2024-03-12 02:01:48] Cleaned up old backups
+[2024-03-13 02:00:12] Starting backup of dataplatform...
+[2024-03-13 02:01:38] Backup complete: /home/marcus/backups/postgres/dataplatform_20240313_020012.sql.gz
+[2024-03-13 02:01:38] Size: 236M
+[2024-03-13 02:01:39] Cleaned up old backups
+[2024-03-14 02:00:11] Starting backup of dataplatform...
+[2024-03-14 02:01:52] Backup complete: /home/marcus/backups/postgres/dataplatform_20240314_020011.sql.gz
+[2024-03-14 02:01:52] Size: 238M
+[2024-03-14 02:01:53] Cleaned up old backups

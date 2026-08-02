@@ -1,0 +1,27 @@
+{
+  "name": "datacorp-dashboard",
+  "version": "1.2.8",
+  "description": "Internal metrics dashboard (deprecated — migrating to Grafana)",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint . --ext .ts,.tsx"
+  },
+  "dependencies": {
+    "next": "13.5.6",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "recharts": "2.10.3",
+    "swr": "2.2.4",
+    "@tanstack/react-query": "5.17.0",
+    "tailwindcss": "3.4.1"
+  },
+  "devDependencies": {
+    "@types/react": "18.2.45",
+    "@types/node": "20.10.6",
+    "typescript": "5.3.3",
+    "eslint": "8.56.0",
+    "eslint-config-next": "14.0.4"
+  }
+}

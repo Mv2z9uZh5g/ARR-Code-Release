@@ -1,0 +1,31 @@
+[2024-03-14 00:00:01,234] {scheduler_job_runner.py:687} INFO - Starting the scheduler
+[2024-03-14 00:00:01,278] {scheduler_job_runner.py:694} INFO - Processing each file at most -1 times
+[2024-03-14 00:00:02,445] {dag_processing.py:158} INFO - Parsing /opt/airflow/dags/ingest_clickstream.py
+[2024-03-14 00:00:02,501] {dag_processing.py:158} INFO - Parsing /opt/airflow/dags/transform_user_events.py
+[2024-03-14 00:00:02,534] {dag_processing.py:158} INFO - Parsing /opt/airflow/dags/export_analytics.py
+[2024-03-14 00:00:02,567] {dag_processing.py:158} INFO - Parsing /opt/airflow/dags/data_quality_checks.py
+[2024-03-14 00:00:03,112] {scheduler_job_runner.py:812} INFO - DAG ingest_clickstream next run: 2024-03-14T01:00:00+00:00
+[2024-03-14 01:00:00,023] {taskinstance.py:1234} INFO - Dependencies all met for dep_context=non-requeueable
+[2024-03-14 01:00:00,089] {taskinstance.py:1445} INFO - Starting attempt 1 of 3
+[2024-03-14 01:00:00,112] {taskinstance.py:1466} INFO - Executing <Task(PythonOperator): consume_and_upload>
+[2024-03-14 01:00:14,556] {python.py:194} INFO - Done. Returned value was: 8432
+[2024-03-14 01:00:14,601] {taskinstance.py:1523} INFO - Marking task as SUCCESS. dag_id=ingest_clickstream, task_id=consume_and_upload
+[2024-03-14 02:00:00,019] {taskinstance.py:1234} INFO - Dependencies all met for dep_context=non-requeueable
+[2024-03-14 02:00:00,087] {taskinstance.py:1445} INFO - Starting attempt 1 of 3
+[2024-03-14 02:00:00,109] {taskinstance.py:1466} INFO - Executing <Task(PythonOperator): consume_and_upload>
+[2024-03-14 02:00:18,334] {python.py:194} INFO - Done. Returned value was: 9201
+[2024-03-14 02:00:18,378] {taskinstance.py:1523} INFO - Marking task as SUCCESS. dag_id=ingest_clickstream, task_id=consume_and_upload
+[2024-03-14 03:00:00,021] {taskinstance.py:1234} INFO - Dependencies all met for dep_context=non-requeueable
+[2024-03-14 03:00:00,093] {taskinstance.py:1445} INFO - Starting attempt 1 of 3
+[2024-03-14 03:00:00,115] {taskinstance.py:1466} INFO - Executing <Task(PythonOperator): consume_and_upload>
+[2024-03-14 03:00:08,221] {taskinstance.py:1503} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/opt/airflow/dags/ingest_clickstream.py", line 52, in consume_and_upload
+    messages = hook.consume(num_messages=10000, timeout=60)
+  File "/opt/airflow/providers/apache/kafka/hooks/consume.py", line 89, in consume
+    raise KafkaException("Consumer timeout: no messages received")
+KafkaException: Consumer timeout: no messages received
+[2024-03-14 03:00:08,245] {taskinstance.py:1523} INFO - Marking task as UP_FOR_RETRY. dag_id=ingest_clickstream, task_id=consume_and_upload
+[2024-03-14 03:05:08,301] {taskinstance.py:1445} INFO - Starting attempt 2 of 3
+[2024-03-14 03:05:22,117] {python.py:194} INFO - Done. Returned value was: 7845
+[2024-03-14 03:05:22,145] {taskinstance.py:1523} INFO - Marking task as SUCCESS. dag_id=ingest_clickstream, task_id=consume_and_upload

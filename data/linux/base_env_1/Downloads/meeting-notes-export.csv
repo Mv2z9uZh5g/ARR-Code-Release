@@ -1,0 +1,9 @@
+date,title,attendees,duration_min,action_items
+2024-03-12,Platform Sync,"Marcus Chen;Priya Sharma;Jonas Berg;Sarah Kim",45,4
+2024-03-08,1:1 with Sarah,"Marcus Chen;Sarah Kim",30,2
+2024-03-05,Sprint Planning,"Marcus Chen;Priya Sharma;Jonas Berg;Daniel Okafor",60,7
+2024-02-28,Sprint Retro,"Marcus Chen;Priya Sharma;Jonas Berg;Daniel Okafor",45,3
+2024-02-27,Architecture Review,"Marcus Chen;Jonas Berg;Priya Sharma;Alex Torres",90,5
+2024-02-20,Data Quality Standup,"Marcus Chen;Daniel Okafor",20,2
+2024-02-15,Vendor Eval: dbt Cloud,"Marcus Chen;Sarah Kim;Priya Sharma",60,3
+2024-02-13,Platform Sync,"Marcus Chen;Priya Sharma;Jonas Berg;Sarah Kim",45,3

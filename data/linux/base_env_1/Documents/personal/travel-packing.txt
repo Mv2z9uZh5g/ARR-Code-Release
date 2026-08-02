@@ -1,0 +1,36 @@
+PyCon US 2024 packing list
+==========================
+
+Clothing:
+- 4x t-shirts
+- 2x button-down (for dinners)
+- jeans x2
+- shorts x1
+- underwear/socks x5
+- light jacket
+- comfortable walking shoes
+- flip flops for hotel
+
+Tech:
+- laptop + charger
+- phone charger
+- USB-C hub
+- earbuds
+- portable battery pack
+- kindle
+
+Documents:
+- conference badge (print or app?)
+- hotel confirmation
+- flight itinerary (UA 847, May 15 depart 6:15 AM)
+
+Other:
+- toiletries bag
+- water bottle
+- snacks for the flight
+- business cards (do people still do this?)
+
+Notes:
+- Sprint talk is on Day 2 at 2:30 PM
+- Dinner with Jonas and the Confluent folks on Thursday
+- Check if DataCorp is sponsoring a booth this year

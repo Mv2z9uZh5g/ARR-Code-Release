@@ -1,0 +1,27 @@
+connections:
+  - conn_id: redshift_default
+    conn_type: redshift
+    host: datacorp-analytics.c9xyzabc.us-west-2.redshift.amazonaws.com
+    port: 5439
+    schema: analytics
+    login: airflow_user
+
+  - conn_id: postgres_default
+    conn_type: postgres
+    host: dataplatform.cluster-xyz.us-west-2.rds.amazonaws.com
+    port: 5432
+    schema: dataplatform
+    login: airflow_user
+
+  - conn_id: aws_default
+    conn_type: aws
+    extra:
+      region_name: us-west-2
+      role_arn: arn:aws:iam::847291046381:role/AirflowExecution
+
+  - conn_id: prod-kafka
+    conn_type: kafka
+    host: b-1.datacorp-msk.abc123.kafka.us-west-2.amazonaws.com:9092,b-2.datacorp-msk.abc123.kafka.us-west-2.amazonaws.com:9092
+    extra:
+      security.protocol: SASL_SSL
+      sasl.mechanism: AWS_MSK_IAM

@@ -1,0 +1,26 @@
+{
+  "report_period": "2024-03-01 to 2024-03-14",
+  "cluster": "staging-cluster",
+  "namespace": "data-pipeline",
+  "metrics": {
+    "cpu_utilization_avg": 0.42,
+    "cpu_utilization_p95": 0.78,
+    "memory_utilization_avg": 0.61,
+    "memory_utilization_p95": 0.84,
+    "pod_restarts_total": 7,
+    "oom_kills": 2,
+    "network_rx_gb": 145.3,
+    "network_tx_gb": 89.7
+  },
+  "top_consumers": [
+    {"pod": "clickstream-worker-0", "cpu_avg": 0.85, "mem_avg_gb": 3.2},
+    {"pod": "transform-scheduler-7f8b9c", "cpu_avg": 0.62, "mem_avg_gb": 2.8},
+    {"pod": "api-server-5d4c3b-xj9k2", "cpu_avg": 0.34, "mem_avg_gb": 1.1},
+    {"pod": "quality-checker-batch-4a2b", "cpu_avg": 0.28, "mem_avg_gb": 0.9}
+  ],
+  "alerts_fired": [
+    {"name": "HighMemoryUsage", "count": 3, "severity": "warning"},
+    {"name": "PodCrashLooping", "count": 1, "severity": "critical"},
+    {"name": "HighLatency", "count": 2, "severity": "warning"}
+  ]
+}

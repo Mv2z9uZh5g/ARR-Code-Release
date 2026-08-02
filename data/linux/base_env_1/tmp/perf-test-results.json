@@ -1,0 +1,29 @@
+{
+  "test_run": "2024-03-13T15:30:00Z",
+  "target": "http://localhost:8080/api/v1/datasets",
+  "tool": "hey",
+  "config": {
+    "concurrency": 50,
+    "requests": 1000,
+    "duration": "30s"
+  },
+  "results": {
+    "total_requests": 1000,
+    "successful": 994,
+    "failed": 6,
+    "rps": 33.2,
+    "latency_ms": {
+      "avg": 142.3,
+      "p50": 98.1,
+      "p90": 234.5,
+      "p95": 412.8,
+      "p99": 1823.4,
+      "max": 3201.1
+    },
+    "status_codes": {
+      "200": 994,
+      "503": 6
+    }
+  },
+  "notes": "P99 way too high. The slow dataset query is the bottleneck — need that index."
+}

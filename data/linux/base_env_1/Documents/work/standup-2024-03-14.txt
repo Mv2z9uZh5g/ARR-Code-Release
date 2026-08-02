@@ -1,0 +1,12 @@
+Yesterday:
+- Deployed Grafana Agent to staging EKS (DATA-421)
+- Reviewed Daniel's PR for env var validation — looks good, minor comments
+- Fixed the slow dataset query (added index, p99 dropped from 1.8s to 45ms)
+
+Today:
+- Test Grafana Agent metric collection, verify Prometheus endpoint works
+- Start migrating the "Pipeline Overview" dashboard from Datadog
+- Write up S3 lifecycle rule change (DATA-425)
+
+Blockers:
+- None right now

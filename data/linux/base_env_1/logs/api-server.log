@@ -1,0 +1,21 @@
+2024-03-14T08:01:12.443Z INF starting server port=8080
+2024-03-14T08:01:12.445Z INF connected to database host=localhost port=5432
+2024-03-14T08:01:12.521Z INF connected to redis host=localhost port=6379
+2024-03-14T08:01:12.522Z INF server ready addr=:8080
+2024-03-14T08:01:15.102Z INF request method=GET path=/health status=200 latency=0.4ms
+2024-03-14T08:01:30.881Z INF request method=GET path=/api/v1/pipelines status=200 latency=12.3ms
+2024-03-14T08:01:31.204Z INF request method=GET path=/api/v1/pipelines/pipe-001 status=200 latency=8.7ms
+2024-03-14T08:02:01.556Z INF request method=GET path=/health status=200 latency=0.3ms
+2024-03-14T08:02:15.332Z INF request method=POST path=/api/v1/pipelines/pipe-003/trigger status=202 latency=45.2ms
+2024-03-14T08:02:15.334Z INF pipeline triggered pipeline_id=pipe-003 job_id=job-8a3f2c
+2024-03-14T08:03:01.102Z INF request method=GET path=/health status=200 latency=0.2ms
+2024-03-14T08:03:44.219Z WRN slow query duration=2.3s query=list_datasets_with_schema
+2024-03-14T08:03:44.220Z INF request method=GET path=/api/v1/datasets status=200 latency=2312.1ms
+2024-03-14T08:04:01.001Z INF request method=GET path=/health status=200 latency=0.3ms
+2024-03-14T08:05:01.203Z INF request method=GET path=/health status=200 latency=0.2ms
+2024-03-14T08:05:22.811Z INF request method=GET path=/api/v1/datasets/ds-analytics-users/schema status=200 latency=34.5ms
+2024-03-14T08:06:01.099Z INF request method=GET path=/health status=200 latency=0.3ms
+2024-03-14T08:06:55.402Z ERR database connection lost error="connection refused"
+2024-03-14T08:06:55.403Z WRN retrying database connection attempt=1
+2024-03-14T08:06:56.410Z INF database reconnected host=localhost port=5432
+2024-03-14T08:07:01.102Z INF request method=GET path=/health status=200 latency=0.4ms

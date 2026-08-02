@@ -1,0 +1,48 @@
+replicaCount: 2
+
+image:
+  repository: 847291046381.dkr.ecr.us-west-2.amazonaws.com/data-api
+  pullPolicy: IfNotPresent
+  tag: "latest"
+
+service:
+  type: ClusterIP
+  port: 8080
+
+ingress:
+  enabled: true
+  className: nginx
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+  hosts:
+    - host: api.datacorp.internal
+      paths:
+        - path: /
+          pathType: Prefix
+  tls:
+    - secretName: ${TLS_SECRET_NAME}
+      hosts:
+        - ${API_HOST}
+
+resources:
+  requests:
+    cpu: 250m
+    memory: 256Mi
+  limits:
+    cpu: "1"
+    memory: 512Mi
+
+autoscaling:
+  enabled: true
+  minReplicas: 2
+  maxReplicas: 8
+  targetCPUUtilizationPercentage: 70
+
+postgresql:
+  enabled: false
+
+env:
+  - name: LOG_LEVEL
+    value: "info"
+  - name: ENVIRONMENT
+    value: "staging"

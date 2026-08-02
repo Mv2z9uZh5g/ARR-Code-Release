@@ -1,0 +1,15 @@
+2024-03-12T14:30:01Z Deploying to staging with image tag: a3f8c21
+2024-03-12T14:30:01Z kubectl config use-context staging-cluster
+2024-03-12T14:30:02Z Switched to context "staging-cluster".
+2024-03-12T14:30:02Z helm upgrade --install data-api ./charts/data-api --namespace data-pipeline --set image.tag=a3f8c21 --set environment=staging --values ./charts/data-api/values-staging.yaml --wait --timeout 5m
+2024-03-12T14:30:05Z Release "data-api" has been upgraded. Happy Helming!
+2024-03-12T14:30:05Z NAME: data-api
+2024-03-12T14:30:05Z LAST DEPLOYED: Tue Mar 12 14:30:05 2024
+2024-03-12T14:30:05Z NAMESPACE: data-pipeline
+2024-03-12T14:30:05Z STATUS: deployed
+2024-03-12T14:30:05Z REVISION: 34
+2024-03-12T14:30:06Z Deploy complete. Checking rollout status...
+2024-03-12T14:30:06Z Waiting for deployment "data-api" rollout to finish: 1 of 2 updated replicas are available...
+2024-03-12T14:30:18Z Waiting for deployment "data-api" rollout to finish: 2 of 2 updated replicas are available...
+2024-03-12T14:30:18Z deployment "data-api" successfully rolled out
+2024-03-12T14:30:18Z Done.
